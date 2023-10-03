@@ -1,0 +1,335 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+    /*The box-sizing property allows us to include the padding and border in an element's total width and height. */
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    /* specifies whether to smoothly animate the scroll position */
+}
+
+:root{
+    --main-color:#984e2b;
+    --text-color: #15241b;
+    --bg-color: #fffefb;
+    --rr-color: #ffa50a;
+    --other-color: #27272b;
+    --bg-color: #fff2de;
+    --big-font: 4.4rem;
+    --h2-font: 3rem;
+    --p-font: 1rem;
+}
+body{
+    background-image: url(bg.jpg);
+}
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 14%;
+    transition: all ease .52s;
+    font-size: large;
+}
+img{
+    border-radius: 50px;
+}
+.logo img{
+    width: 60px;
+    height: auto;
+}
+
+.navbar{
+    display: flex;
+}
+
+.navbar a{
+    position: relative;;
+    margin: 0px 15px;
+    padding: 5px 5px;
+    font: bold;
+    /* font-size: var(--p-font);
+    font-weight: 500; */
+    color:var(--text-color) ;
+    transition: all ease .50s;
+}
+.navbar a::after{
+    position: absolute;
+    content: '';
+    height: 3px;
+    bottom: 0px;
+    width: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    background: var(--main-color);
+    transition: all ease .50s;
+}
+
+.navbar a:hover::after{
+    width: 40%;
+}
+
+.navbar a:hover{
+    color: var(--main-color);
+}
+
+.navbar a:active{
+    color: var(--main-color);
+}
+
+.navbar a:hover::after{
+    width: 40%;
+}
+
+.header-icons{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-icons i {
+    vertical-align: middle;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-left: 20px;
+    transition: all ease.50s;
+}
+.header-icons i:hover{
+    transform: scale(1.1)translateX(-5px);
+    color: var(--main-color);
+}
+#menu-icon{
+    color: var(--text-color);
+    font-size: 30px;
+    z-index: 10001;
+    margin-left: 25px;
+    cursor: pointer;
+    display: none;
+}
+.home-text{
+    margin: 80px 130px;
+    color: rgb(41, 164, 164);
+}
+.home-text h1{
+    font-size: 35px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    font-family: 'Playfair Display', serif;
+
+}
+
+.home-text h1 span{
+    color: rgb(52, 88, 61);
+}
+
+/* .anim{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.7s linear forwards;
+} */
+
+section{
+    padding: 85px 18% 65px;
+}
+.home{
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+   
+}
+
+.home-img img{
+    height: auto;
+    width: 700px;
+}
+
+.home-btnn{
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    width: 200px;
+    padding:  15px 0;
+    text-align: center;
+    font-size: medium;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid rgb(120, 135, 210);
+    background: transparent;
+    color: rgb(41, 164, 164);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover{
+    background-color: #064c4d;
+    border: none;
+}
+button:hover span{
+    width: 100%;
+}
+.banner2{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(images/1_XSIv3AMRIan8muVoft-J-w.jpeg);
+    /* background-color: #31314a; */
+    background-size: cover;
+    background-position: center;
+}
+.btn{
+    width: 100%;
+    background: none;
+    border: 2px solid rgb(120, 135, 210);
+    color: aliceblue;
+    padding: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 10px 0;
+    border-radius: 25px;
+    z-index: -1;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.login-box{
+    width: 290px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: aliceblue;
+}
+.login-box h1{
+    float: left;
+    font-size: 30px;
+    border-bottom: 4px solid rgb(120, 135, 210);
+    margin-bottom: 30px;
+    padding: 13px 0;
+}
+.textbox{
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 3px 0;
+    border-bottom: 1px solid rgb(120, 135, 210);
+}
+
+.textbox input{
+    border: none;
+    outline: none;
+    background: none;
+    color: aliceblue;
+    font-size: 18px;
+    width: 800px;
+    float: left;
+    margin: 10px;
+}
+
+.adversiting{
+    padding: 15px 50px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    bottom: 46px;
+}
+.adversiting a{
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    text-decoration: none;
+    font-weight: 600;
+    color: aliceblue;
+}
+
+.center-text{
+    text-align: center;
+}
+
+.center-text strong{
+    font-size:var(--p-font);
+    font-weight: 500;
+    color: var(--main-color);
+}
+
+.center-text h2{
+    font-family: 'Playfair Display', serif;
+    font-size: var(--h2-font);
+    font-weight: 900;
+    margin-top: auto;
+}
+
+.basic-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: 1.5rem;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+}
+.box-img{
+    height: auto;
+    width: 100px;
+}
+.btnbtn-outline-danger{
+    background-color: #064c4d;
+    border: none;
+}
+button:hover span{
+    width: 100%;
+}
+
+.btn1{
+    width: 80px;
+}
+
+.box-img img{
+    object-fit: contain;
+}
+.box h3{
+    margin: 15px 0;
+    font-size: 25px;
+    font-weight: 900;
+    font-family: 'Playfair Display', serif;
+}
+
+.box p{
+    font-size: var(--p-font);
+    line-height: 30px;
+    color: var(--other-color);
+}
+
+.history{
+    display: gird;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.history-img img{
+    height: auto;
+    width: 30%;
+}
+
+.history-text strong{
+    font-size: var(--p-font); 
+}
+
+
+
+
+
+

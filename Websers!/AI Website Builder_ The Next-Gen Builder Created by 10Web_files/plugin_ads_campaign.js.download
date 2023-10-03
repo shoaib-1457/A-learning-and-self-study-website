@@ -1,0 +1,3 @@
+jQuery(document).ready(function(){let page_url,get_plugin_ads_campaign;page_url=window.location.href;get_plugin_ads_campaign=0;if(page_url.match(/utm(.*)campaign/g)){if(page_url.match(/photo(.*)gallery/g)){get_plugin_ads_campaign=101;}
+else if(page_url.match(/form(.*)maker/g)){get_plugin_ads_campaign=95;}}
+if(get_plugin_ads_campaign!=0){localStorage.setItem('plugin_ads_campaign',get_plugin_ads_campaign);}});
